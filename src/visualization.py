@@ -152,7 +152,8 @@ def _build_frames(us_data, country_data, us_trend,
                 go.Table(
                     header=dict(
                         values=["Year", "Avg Temp (°C)", "Change from Start (°C)"],
-                        fill_color="paleturquoise", align="left",
+                        fill_color=THEME["surface"], align="left",
+                        font=dict(color=THEME["text"], size=12),
                     ),
                     cells=dict(
                         values=[
@@ -160,7 +161,8 @@ def _build_frames(us_data, country_data, us_trend,
                             np.round(trend_to_year["AverageTemperature"], 2),
                             np.round(trend_to_year["TempChange"], 2),
                         ],
-                        fill_color="lavender", align="left",
+                        fill_color=THEME["bg"], align="left",
+                        font=dict(color=THEME["text"]),
                     ),
                 ),
                 go.Scatter(
