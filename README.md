@@ -2,6 +2,8 @@
 
 Interactive temperature analysis dashboard built for CSC 422 (Automated Learning & Data Analysis) at NC State University, Fall 2024.
 
+![Dashboard Screenshot](assets/dashboard_screenshot.png)
+
 ## Overview
 
 ESTVP processes decades of historical meteorological data and presents it through an animated, interactive dashboard. Users can explore temperature trends at both US state and global country levels, with linear regression predictions projected 10 years forward.
@@ -22,29 +24,34 @@ ESTVP processes decades of historical meteorological data and presents it throug
 ## Project Structure
 
 ```
-├── Combined.py              # Final consolidated dashboard
+├── app.py                   # Main entry point (refactored)
+├── src/
+│   ├── config.py            # Paths, constants, theme settings
+│   ├── data.py              # Data loading, cleaning, transformations
+│   └── visualization.py     # Dashboard figure construction
+├── Combined.py              # Original monolithic dashboard (preserved)
+├── dataHandler.py           # Outlier detection pipeline (Dash UI)
 ├── FinalPrototype/          # Dash-based interactive prototype
-│   ├── app.py               # Prototype v1
-│   └── app2.py              # Prototype v2
-├── dataHandler.py           # Data preprocessing and outlier detection pipeline
-├── dataPrep.py              # Dataset preparation utilities
+├── Prototype2/              # Earlier Flask-based prototype
 ├── Noise.py                 # Noise analysis and visualization
-├── archive/                 # Temperature datasets (raw + trimmed variants)
-│   ├── Trimmed/             # Cleaned datasets by method (Threshold, Z-score, IQR, etc.)
-│   └── Raw/                 # Original source CSVs (not included — see Data below)
-├── assets/                  # CSS stylesheets
-└── Documents/               # Project proposal and midterm report
+├── archive/                 # Temperature datasets
+│   └── Trimmed/Threshold/   # Cleaned datasets used by dashboard
+├── assets/                  # CSS and screenshots
+├── Documents/               # Project proposal and midterm report
+└── requirements.txt
 ```
-
-## Data
-
-This project uses the [Climate Change: Earth Surface Temperature Data](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data) dataset from Kaggle. Raw CSV files are not included in this repository due to size (~600MB). The trimmed/processed datasets used by the dashboard are included.
 
 ## Usage
 
 ```bash
-pip install pandas numpy plotly scikit-learn scipy dash tqdm
-python Combined.py
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python app.py
 ```
 
 The dashboard will be generated as an HTML file and opened in your default browser.
+
+## Data
+
+This project uses the [Climate Change: Earth Surface Temperature Data](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data) dataset from Kaggle. Raw CSV files are not included in this repository due to size (~600MB). The trimmed/processed datasets used by the dashboard are included.
