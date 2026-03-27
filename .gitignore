@@ -1,0 +1,26 @@
+# Large raw datasets
+archive/Raw/
+archive/NoiseData/
+archive/NoiseGraphs/
+archive/OutlierData/
+
+# City-level CSVs are too large (350-500MB each)
+archive/Trimmed/*/City-*
+
+# Non-Threshold trimmed methods (not used by dashboard, 20-30MB each)
+archive/Trimmed/Iqr/
+archive/Trimmed/Isolation_forest/
+archive/Trimmed/Knn/
+archive/Trimmed/Z_score/
+
+# Large generated data
+Prototype2/data/
+
+# Generated output
+temperature_analysis_dashboard.html
+
+# Python
+.mypy_cache/
+__pycache__/
+*.pyc
+.venv/

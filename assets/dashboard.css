@@ -1,0 +1,33 @@
+/* Button styling */
+.updatemenu-button {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+    border: 1px solid #555555 !important;
+}
+
+.updatemenu-button:hover {
+    background-color: #3d3d3d !important;
+}
+
+.updatemenu-button.active {
+    background-color: #404040 !important;
+}
+
+/* Menu styling */
+.updatemenu-dropdown {
+    background-color: #2d2d2d !important;
+    border: 1px solid #555555 !important;
+}
+
+/* Table styling */
+.js-plotly-plot .plotly .table {
+    color: #ffffff !important;
+}
+
+.js-plotly-plot .plotly .table .header {
+    background-color: #1f1f1f !important;
+}
+
+.js-plotly-plot .plotly .table .cell {
+    background-color: #2d2d2d !important;
+}

@@ -1,0 +1,72 @@
+/* Global dark mode */
+body {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Dropdown container */
+.Select-control {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border-color: #555555 !important;
+}
+
+/* Dropdown single value (selected item) */
+.Select--single > .Select-control .Select-value-label {
+    color: #ffffff !important;
+}
+
+/* Placeholder for the dropdown */
+.Select-placeholder {
+    color: #aaaaaa !important;  /* Light gray for better visibility */
+}
+
+/* Dropdown options */
+.VirtualizedSelectOption {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+/* Dropdown focused option */
+.VirtualizedSelectFocusedOption {
+    background-color: #444444 !important;
+    color: #ffffff !important;
+}
+
+/* Dropdown menu */
+.Select-menu-outer {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+/* DataTable styling */
+.dash-table-container .dash-spreadsheet {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.dash-table-container .dash-header {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.dash-table-container .dash-row {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.dash-table-container .dash-row .dash-cell {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Button styling */
+button {
+    background-color: #555555;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
